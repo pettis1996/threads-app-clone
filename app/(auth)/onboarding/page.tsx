@@ -1,8 +1,10 @@
 async function Page() {
     return (
-        <>
-            <h1 className="head-text">Onboarding</h1>
-        </>
+        <main>
+            <h1 className="head-text">
+                Onboarding
+            </h1>
+        </main>
     )
 }
 

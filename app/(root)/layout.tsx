@@ -8,6 +8,8 @@ import LeftSidebar from '@/components/shared/LeftSidebar'
 import Bottombar from '@/components/shared/Bottombar'
 import RightSidebar from '@/components/shared/RightSidebar'
 
+import { dark } from '@clerk/themes'
+
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -21,12 +23,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      appearance={{
+        baseTheme: dark
+      }}
+    >
       <html lang="en">
-        <body className="{`$inter.className bg-dark-1`}">
+        <body className={inter.className}>
           <Topbar />
 
-          <main>
+          <main className="flex flex-row">
             <LeftSidebar />
 
             <section className= "main-container">
